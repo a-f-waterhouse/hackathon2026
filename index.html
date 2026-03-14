@@ -3,18 +3,34 @@
 <head>
     <title>title</title>
     <link rel="stylesheet" href="style.css">
-    <script src="showWindows.js"></script>
-
-
 </head>
 <body>
 
-
+<!-- MESSAGES -->
 
 <div class="window" id="messages">
     <div class="windowtitle" id="messagestitle">Messages<button class="exitbutton" onclick="showWindow('messages');">[x]</button></div>
     <div class="windowcontent">
-        <p>coooonnnnnteeeennntt</p>
+        <h1 class="name">Jacob Jones</h1>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/jacobpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Jacob</h3>
+        </div>
+        <img src="messagePhotos/outside.png" style="width:200px;height:200px;">
+        <p class="recievermessage">Walk was fun!</p>
+        <p class="recievermessage">Holly where did you go?</p>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <p class="sendermessage">Pizza arrived while you were gone! I'm in LG23 :D</p>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/jacobpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Jacob</h3>
+        </div>
+        <p class="recievermessage">They won't let us downstairs? Are you okay?</p>
+        <p class="recievermessage">Holly?</p>
+        <p class="recievermessage">Holly???</p>
     </div>
 </div>
 
@@ -42,38 +58,38 @@
     <div class="windowtitle">Mailbox<button class="exitbutton" onclick="showWindow('emails');">[x]</button></div>
     <div class="windowcontent">
         <div id="buttons">
-            <button>New Message</button>
-            <button>Sync</button>
+            <button id="newmessage" onclick="newMessage()"><img src="icons/Writing_Purple.png" width="90px" height="90px">New Message</button>
+            <button id="sync" onclick="sync()"><img src="icons/Circle_Open_Purple.png" width="90px" height="90px">Sync</button>
         </div>
         <div id="emaillist">
             <!-- duplicate this button for each email, change its id -->
             <button id="email1" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>University of Birmingham Canvas Notifications</p></div>
+                <div class="firstline"><p class ="sender">University of Birmingham Canvas Notifications</p></div>
                 <div class="firstline"><p class="datetime">14th March 2025, 12:03pm</p></div>
                 <p>Recent Canvas Notifications</p>
             </button>
             <button id="email2" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>Tex Plastic Surgery</p></div>
+                <div class="firstline"><p class ="sender">Tex Plastic Surgery</p></div>
                 <div class="firstline"><p class="datetime">12th March 2025, 3:23am</p></div>
                 <p>No Subject</p>
             </button>
             <button id="email3" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>BirmingHack 2.0</p></div>
+                <div class="firstline"><p class ="sender">BirmingHack 2.0</p></div>
                 <div class="firstline"><p class="datetime">11th March 2025, 9:02am</p></div>
                 <p>Your BirmingHack 2.0 Confirmation</p>
             </button>
             <button id="email4" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>John Smith</p></div>
+                <div class="firstline"><p class ="sender">John Smith</p></div>
                 <div class="firstline"><p class="datetime">11th March 2025, 1:44am</p></div>
                 <p>I Will Get You.</p>
             </button>
             <button id="email5" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>Ian Mitchell</p></div>
+                <div class="firstline"><p class ="sender">Ian Mitchell</p></div>
                 <div class="firstline"><p class="datetime">10th March 2025, 10:08pm</p></div>
                 <p>Overdue Assignment</p>
             </button>
             <button id="email6" class="email" onclick="displayEmail(this.id)">
-                <div class="firstline"><p>Sent: Ian Mitchell</p></div>
+                <div class="firstline"><p class ="sender">Sent: Ian Mitchell</p></div>
                 <div class="firstline"><p class="datetime">10th March 2025, 12:37am</p></div>
                 <p>Assignment Extension</p>
             </button>
@@ -81,6 +97,21 @@
     </div>
 </div>
 
+<!-- popups -->
+<div class="window" id="newmessagepopup">
+    <div class="windowtitle" id="newmessagestitle">Alert!<button class="exitbutton" onclick="showWindow('newmessagepopup');">[x]</button></div>
+    <div class="windowcontent">
+        <p>Cannot write new email - No Internet Connection</p>
+    </div>
+</div>
+<div class="window" id="syncpopup">
+    <div class="windowtitle" id="syncmessagestitle">Alert!<button class="exitbutton" onclick="showWindow('syncpopup');">[x]</button></div>
+    <div class="windowcontent">
+        <p>Sync failed - No Internet Connection</p>
+    </div>
+</div>
+
+<!-- window for each email message -->
 <div class = "window" id = "email1display" style="display: none; width: 60%">
     <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email1display');">[x]</button></div>
     <div class="emailcontent">
@@ -102,6 +133,7 @@
         <p>Assignment created: Assessed Quiz 2: ML Algorithms in Practice (10%), LC Artificial Intelligence 1 (34238, 34237)
             <br>due: 19 Mar at 18:00
             <br>Click to view</p>
+        <img src="emailPhotos/canvas_logo.png">
     </div>
 </div>
 
@@ -117,6 +149,7 @@
         <p>This is Tex! Advertising the fact that I have a plastic surgery with 40% off to all UOB students with code TEXISAWESOME!! Feel free to pop down whenever, we're open 24/7/365.
             <br>See you at the best plastic surgery since sliced bread,
             <br>Tex.</p>
+        <img src="emailPhotos/tex_ball.png" height="100px" width="100px">
         <p>Unsubscribe from my mailing list</p>
     </div>
 </div>
@@ -137,6 +170,7 @@
         <p>Summary
             <br>1 x Hacker
             <br>View Order</p>
+        <img src="emailPhotos/birminghack-pathed.svg">
     </div>
 </div>
 
@@ -170,7 +204,7 @@
             <br>Prof Ian Mitchell
             <br>School of Computer Science</p>
         <p>***DRAFT***
-            <br>If you only taught better I'd be able to do it you realise! You're always going off track and ultimately not going through what we need to know to be able to do something like that. I understand we have to do "Independent Learning" but that shouldn't be on the bare bone course materials I pay £9500 a year to learn! I wish you understood how BAD you are at teaching. </p>
+            <br>If you only taught better I'd be able to do it you realise! You're always going off track and ultimately not going through what we need to know to be able to do something like that. I understand we have to do "Independent Learning" but that shouldn't be on the bare bone course materials I pay Â£9500 a year to learn! I wish you understood how BAD you are at teaching. </p>
         <p>Kind Regards,
             <br>Holly Packer</p>
     </div>
@@ -190,7 +224,7 @@
     </div>
 </div>
 
-
+<!-- TERMINAL -->
 
 <div class = "window" id = "terminal">
     <div class="windowtitle" id="terminaltitle">Terminal<button class="exitbutton" onclick="showWindow('terminal');">[x]</button></div>
@@ -212,12 +246,12 @@
 
 
 
-    <ul id="taskbar">
-        <li><img src="messages.png" onclick="showWindow('messages');" class = "taskbarIcon"></li>
-        <li><img src="camera.png" onclick="showWindow('camera');" class = "taskbarIcon"></li>
-        <li><img src="emails.png" onclick="showWindow('emails');" class = "taskbarIcon"></li>
-        <li><img src="terminal.png" onclick="showWindow('terminal');" class = "taskbarIcon"></li>
-    </ul>
+<ul id="taskbar">
+    <li><img src="icons/messages.png" onclick="showWindow('messages');" class = "taskbarIcon"></li>
+    <li><img src="icons/camera.png" onclick="showWindow('camera');" class = "taskbarIcon"></li>
+    <li><img src="icons/emails.png" onclick="showWindow('emails');" class = "taskbarIcon"></li>
+    <li><img src="icons/terminal.png" onclick="showWindow('terminal');" class = "taskbarIcon"></li>
+</ul>
 
 
 <script src="terminal.js"></script>

@@ -9,7 +9,12 @@ count = 10;
 function displayEmail(emailid) {
         document.getElementById(emailid+"display").style.display = "block";
     }
-
+function newMessage() {
+    document.getElementById("newmessagepopup").style.display = "block";
+}
+function sync() {
+    document.getElementById("syncpopup").style.display = "block";
+}
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "title")) {
@@ -52,4 +57,16 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+function showWindow(winID){
+    if(document.getElementById(winID).style.display=="block")
+    {
+        document.getElementById(winID).style.display="none";
+    }
+    else
+    {
+        document.getElementById(winID).style.display="block";
+    }
+
 }
