@@ -2,7 +2,7 @@
    background-color: black;
    color: white;
    width: 100%;
-   margin: 0;
+  margin: -10;
   position:fixed;
   bottom:0;
 }
@@ -11,6 +11,7 @@
     background-color: coral;
     width: 100px;
     height: 100px;
+    display: none;
 }
 
 ul{
@@ -25,4 +26,5 @@ display: block;
 
 body{
 color: red;
+margin: 0;
 }

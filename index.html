@@ -3,20 +3,21 @@
 <head>
     <title>title</title>
     <link rel="stylesheet" href="style.css">
+    <script src="showWindows.js"></script>
 </head>
 <body>
 <header>
     hello worl
 </header>
 
-<div class = "window">
+<div class = "window" id = "messages">
 
 </div>
 
 
 <div id = "taskbar">
     <ul>
-        <li><a>one</a></li>
+        <li><button onclick="showWindow('messages');">one</button></li>
         <li>two</li>
         <li>three</li>
     </ul>
