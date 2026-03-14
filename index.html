@@ -5,29 +5,210 @@
     <link rel="stylesheet" href="style.css">
     <script src="showWindows.js"></script>
 
+
 </head>
 <body>
 
+
+
 <div class="window" id="messages">
-    <div class="windowtitle">Messages<button class="exitbutton">[x]</button></div>
+    <div class="windowtitle" id="messagestitle">Messages<button class="exitbutton" onclick="showWindow('messages');">[x]</button></div>
     <div class="windowcontent">
         <p>coooonnnnnteeeennntt</p>
     </div>
 </div>
+
+
+<!--IMAGE WINDOWS-->
 
 <div class = "window" id = "camera">
-    <div class="windowtitle">Photos<button class="exitbutton">[x]</button></div>
+    <div class="windowtitle" id="cameratitle">Photos<button class="exitbutton" onclick="showWindow('camera');">[x]</button></div>
     <div class="windowcontent">
-        <img class = "photo" src = "test.jpg" >
+        <img class = "photo" src = "gallery/test.jpg" onclick="showWindow('fish')" >
     </div>
 </div>
 
-<div class = "window" id = "emails">
-    <div class="windowtitle">Emails<button class="exitbutton">[x]</button></div>
+<div class = "image window" id = "fish">
+    <div class="windowtitle" id="fishtitle">fish.jpg<button class="exitbutton" onclick="showWindow('fish');">[x]</button></div>
     <div class="windowcontent">
-        <p>coooonnnnnteeeennntt</p>
+        <img src="gallery/test.jpg">
     </div>
 </div>
+
+
+<!-- EMAILS-->
+
+<div class = "window" id = "emails">
+    <div class="windowtitle">Mailbox<button class="exitbutton" onclick="showWindow('emails');">[x]</button></div>
+    <div class="windowcontent">
+        <div id="buttons">
+            <button>New Message</button>
+            <button>Sync</button>
+        </div>
+        <div id="emaillist">
+            <!-- duplicate this button for each email, change its id -->
+            <button id="email1" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>University of Birmingham Canvas Notifications</p></div>
+                <div class="firstline"><p class="datetime">14th March 2025, 12:03pm</p></div>
+                <p>Recent Canvas Notifications</p>
+            </button>
+            <button id="email2" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>Tex Plastic Surgery</p></div>
+                <div class="firstline"><p class="datetime">12th March 2025, 3:23am</p></div>
+                <p>No Subject</p>
+            </button>
+            <button id="email3" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>BirmingHack 2.0</p></div>
+                <div class="firstline"><p class="datetime">11th March 2025, 9:02am</p></div>
+                <p>Your BirmingHack 2.0 Confirmation</p>
+            </button>
+            <button id="email4" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>John Smith</p></div>
+                <div class="firstline"><p class="datetime">11th March 2025, 1:44am</p></div>
+                <p>I Will Get You.</p>
+            </button>
+            <button id="email5" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>Ian Mitchell</p></div>
+                <div class="firstline"><p class="datetime">10th March 2025, 10:08pm</p></div>
+                <p>Overdue Assignment</p>
+            </button>
+            <button id="email6" class="email" onclick="displayEmail(this.id)">
+                <div class="firstline"><p>Sent: Ian Mitchell</p></div>
+                <div class="firstline"><p class="datetime">10th March 2025, 12:37am</p></div>
+                <p>Assignment Extension</p>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class = "window" id = "email1display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email1display');">[x]</button></div>
+    <div class="emailcontent">
+        <p class="senderinfo">University of Birmingham Canvas Notifications
+            <br>To: Me >
+            <br>From: notifications@instructure.com
+            <br>Subject: Recent Canvas Notifications
+            <br>14th March 2025, 12:03pm</p>
+        <p>You're signed up to receive a weekly report of some notifications from your Canvas account. Below is the report for the week ending 14 Mar:</p>
+        <p>Assignment created - Assessed Quiz 2: ML Algorithms in Practice (10%), LC Artificial Intelligence 1 (34238, 34237)
+            <br>due: 20 Mar at 12:00
+            <br>Click to view</p>
+        <p>Assignment created: Assignment 3 (7%), LC Theories of Computation (35393 . 35392)
+            <br>due: 25 Mar at 13:00
+            <br>Click to view</p>
+        <p>Assignment created: Assessed Quiz 1 (10%), LC Artificial Intelligence 1 (34238, 34237)
+            <br>due: 23 Mar at 17:00
+            <br>Click to view</p>
+        <p>Assignment created: Assessed Quiz 2: ML Algorithms in Practice (10%), LC Artificial Intelligence 1 (34238, 34237)
+            <br>due: 19 Mar at 18:00
+            <br>Click to view</p>
+    </div>
+</div>
+
+<div class = "window" id = "email2display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email2display');">[x]</button></div>
+    <div class="windowcontent">
+        <p class="senderinfo">Tex Plastic Surgery
+            <br>To: Me >
+            <br>Reply To: tex@guild.bham.ac.uk
+            <br>Subject: No Subject
+            <br>12th March 2025, 3:23am</p>
+        <p>Hello,</p>
+        <p>This is Tex! Advertising the fact that I have a plastic surgery with 40% off to all UOB students with code TEXISAWESOME!! Feel free to pop down whenever, we're open 24/7/365.
+            <br>See you at the best plastic surgery since sliced bread,
+            <br>Tex.</p>
+        <p>Unsubscribe from my mailing list</p>
+    </div>
+</div>
+
+<div class = "window" id = "email3display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email3display');">[x]</button></div>
+    <div class="windowcontent">
+        <p class="senderinfo">BirmingHack 2.0
+            <br>To: Me >
+            <br>Reply To: css@guild.bham.ac.uk
+            <br>Subject: Your BirmingHack 2.0 Confirmation
+            <br>11th March 2025, 9:02am</p>
+        <p>BirmingHack 2.0
+            <br>March 14th - 15th </p>
+        <p>Hi Holly,
+            <br>You registered 1 ticket for BirmingHack 2.0. Your registration reference is HS74.
+            <br>The BirmingHack 2.0 Team</p>
+        <p>Summary
+            <br>1 x Hacker
+            <br>View Order</p>
+    </div>
+</div>
+
+<div class = "window" id = "email4display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email4display');">[x]</button></div>
+    <div class="windowcontent">
+        <p class="senderinfo">John Smith
+            <br>To: Me >
+            <br>Reply To: johnsmith01@icloud.com
+            <br>Subject: I Will Get You.
+            <br>11th March 2025, 1:44am</p>
+        <p>You shouldn't of said that.</p>
+        <p>You really. shouldn't have said that.</p>
+        <p>Beware.</p>
+        <p>See you,</p>
+        <p>John Smith</p>
+    </div>
+</div>
+
+<div class = "window" id = "email5display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email5display');">[x]</button></div>
+    <div class="windowcontent">
+        <p class="senderinfo">Ian Mitchell
+            <br>To: Me >
+            <br>Reply To: i.a.mitchell@bham.ac.uk
+            <br>Subject: Overdue Assignment
+            <br>10th March 2025, 10:08pm</p>
+        <p>Hi Holly,</p>
+        <p>You're assignment is overdue. Please submit before tomorrow, I cannot give you any more extra time on this.</p>
+        <p>Kind Regards,
+            <br>Prof Ian Mitchell
+            <br>School of Computer Science</p>
+        <p>***DRAFT***
+            <br>If you only taught better I'd be able to do it you realise! You're always going off track and ultimately not going through what we need to know to be able to do something like that. I understand we have to do "Independent Learning" but that shouldn't be on the bare bone course materials I pay £9500 a year to learn! I wish you understood how BAD you are at teaching. </p>
+        <p>Kind Regards,
+            <br>Holly Packer</p>
+    </div>
+</div>
+
+<div class = "window" id = "email6display" style="display: none; width: 60%">
+    <div class="windowtitle">Message<button class="exitbutton" onclick="showWindow('email6display');">[x]</button></div>
+    <div class="windowcontent">
+        <p class="senderinfo">Me
+            <br>To: Ian Mitchell i.a.mitchell@bham.ac.uk
+            <br>Subject: Assignment Extension
+            <br>10th March 2025, 12:37am</p>
+        <p>Dear Prof Mitchell,</p>
+        <p>Please may have another extension on top of my current one? I'm a bit behind and need to catch up, we have the hackathon this weekend so I won't be able to complete it.</p>
+        <p>Kind Regards,
+            <br>Holly Packer</p>
+    </div>
+</div>
+
+
+
+<div class = "window" id = "terminal">
+    <div class="windowtitle" id="terminaltitle">Terminal<button class="exitbutton" onclick="showWindow('terminal');">[x]</button></div>
+    <div class="windowcontent">
+        <div id="terminalcontent">
+            <div class="output" id="output">
+                <p>You've found me. You've found it. My laptop. </p>
+            </div>
+
+            <div id="inputLine">
+                <span>&gt;</span>
+                <input type="text" id="cmd">
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -35,10 +216,11 @@
         <li><img src="messages.png" onclick="showWindow('messages');" class = "taskbarIcon"></li>
         <li><img src="camera.png" onclick="showWindow('camera');" class = "taskbarIcon"></li>
         <li><img src="emails.png" onclick="showWindow('emails');" class = "taskbarIcon"></li>
+        <li><img src="terminal.png" onclick="showWindow('terminal');" class = "taskbarIcon"></li>
     </ul>
 
 
-
+<script src="terminal.js"></script>
 <script src="window.js"></script>
 </body>
 </html>

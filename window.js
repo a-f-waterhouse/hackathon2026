@@ -1,8 +1,14 @@
 // Make the DIV element draggable:
-//dragElement(document.getElementById("windowTest"));
-dragElement(document.getElementById("messages"));
-dragElement(document.getElementById("camera"));
-dragElement(document.getElementById("emails"));
+windows = document.getElementsByClassName("window");
+for(let i=0;i<windows.length;i++){
+    dragElement(windows[i]);
+}
+
+count = 10;
+
+function displayEmail(emailid) {
+        document.getElementById(emailid+"display").style.display = "block";
+    }
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -36,6 +42,9 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    //place the element on top:
+    count++
+    elmnt.style.zIndex = count;
   }
 
   function closeDragElement() {
