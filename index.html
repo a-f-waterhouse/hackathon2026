@@ -4,26 +4,41 @@
     <title>title</title>
     <link rel="stylesheet" href="style.css">
     <script src="showWindows.js"></script>
+
 </head>
 <body>
-<header>
-    hello worl
-</header>
 
-<div class = "window" id = "messages">
+<div class="window" id="messages">
+    <div class="windowtitle">Messages<button class="exitbutton">[x]</button></div>
+    <div class="windowcontent">
+        <p>coooonnnnnteeeennntt</p>
+    </div>
+</div>
 
+<div class = "window" id = "camera">
+    <div class="windowtitle">Photos<button class="exitbutton">[x]</button></div>
+    <div class="windowcontent">
+        <img class = "photo" src = "test.jpg" >
+    </div>
+</div>
+
+<div class = "window" id = "emails">
+    <div class="windowtitle">Emails<button class="exitbutton">[x]</button></div>
+    <div class="windowcontent">
+        <p>coooonnnnnteeeennntt</p>
+    </div>
 </div>
 
 
-<div id = "taskbar">
-    <ul>
-        <li><button onclick="showWindow('messages');">one</button></li>
-        <li>two</li>
-        <li>three</li>
+
+    <ul id="taskbar">
+        <li><img src="messages.png" onclick="showWindow('messages');" class = "taskbarIcon"></li>
+        <li><img src="camera.png" onclick="showWindow('camera');" class = "taskbarIcon"></li>
+        <li><img src="emails.png" onclick="showWindow('emails');" class = "taskbarIcon"></li>
     </ul>
-</div>
 
 
 
+<script src="window.js"></script>
 </body>
 </html>
