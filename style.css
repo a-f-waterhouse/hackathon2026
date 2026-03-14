@@ -1,0 +1,28 @@
+#taskbar{
+   background-color: black;
+   color: white;
+   width: 100%;
+   margin: 0;
+  position:fixed;
+  bottom:0;
+}
+
+.window{
+    background-color: coral;
+    width: 100px;
+    height: 100px;
+}
+
+ul{
+display: flex;
+justify-content: space-evenly;
+}
+
+li
+{
+display: block;
+}
+
+body{
+color: red;
+}
