@@ -3,20 +3,61 @@
 <head>
     <title>title</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
 </head>
 <body>
 
+<div id="stickynote">
+    This laptop was given to you for this years hackathon - but it hasn't been cleared yet. We're hoping it still will be okay! We're not exactly sure where we found it.
+    Feel free to click on all the apps you see, I think some apps might be locked - each one should contain a password to open the next app. I would suggest you start with the terminal though.
+    Feel free to click on all the apps you see, I think some apps might be locked - each one should contain a password to open the next app. I would suggest you start with the terminal though.
+</div>
+
 <!-- MESSAGES -->
+
 
 <div class="window" id="messages">
     <div class="windowtitle" id="messagestitle">Messages<button class="exitbutton" onclick="showWindow('messages');">[x]</button></div>
+    <div class="windowcontent">
+        <div id="messagelist">
+            <!-- duplicate this button for each email, change its id -->
+            <button id="message1" class="messagebutton" onclick="showWindow('messagesJacob');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/jacobpfp.jpg"></div>
+                <div class="usernamecontainer"><div class="username"><p>Jacob Jones</p></div></div>
+            </button>
+            <button id="message2" class="messagebutton" onclick="showWindow('announcementmessages');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/announcements.png"></div>
+                <div class="usernamecontainer"><div class="username"><p>Announcements</p></div></div>
+            </button>
+            <button id="message3" class="messagebutton" onclick="showWindow('messagesJohn');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/johnpfp.jpg"></div>
+                <div class="usernamecontainer"><div class="username"><p>Unknown - Maybe John Smith?</p></div></div>
+            </button>
+            <button id="message4" class="messagebutton" onclick="showWindow('messagesNathan');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/nathanpfp.jpg"></div>
+                <div class="usernamecontainer"><div class="username"><p>Nathan Gold</p></div></div>
+            </button>
+            <button id="message5" class="messagebutton" onclick="showWindow('messagesLeader');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/announcements.png"></div>
+                <div class="usernamecontainer"><div class="username"><p>Matty</p></div></div>
+            </button>
+            <button id="message6" class="messagebutton" onclick="showWindow('messagesTex');">
+                <div class="pfpcontainer"><img class="userpfp" src="messagePhotos/texpfp.png"></div>
+                <div class="usernamecontainer"><div class="username"><p>Tex</p></div></div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="window" id="messagesJacob">
+    <div class="windowtitle" id="messagesJacobtitle">Messages<button class="exitbutton" onclick="showWindow('messagesJacob');">[x]</button></div>
     <div class="windowcontent">
         <h1 class="name">Jacob Jones</h1>
         <div class="recieverTogether">
             <img class="profile" src="messagePhotos/jacobpfp.jpg" style="width:48px;height:48px;">
             <h3 class="username">Jacob</h3>
         </div>
-        <img src="messagePhotos/outside.png" style="width:200px;height:200px;">
+        <img src="messagePhotos/outside.jpg" style="width:200px;height:200px;">
         <p class="recievermessage">Walk was fun!</p>
         <p class="recievermessage">Holly where did you go?</p>
         <div class="senderTogether">
@@ -34,13 +75,182 @@
     </div>
 </div>
 
+<div class="window" id="announcementmessages">
+    <div class="windowtitle" id="messagesAnnouncementstitle">Messages<button class="exitbutton" onclick="showWindow('announcementmessages');">[x]</button></div>
+    <div class="windowcontent">
+        <h1 class="name">BirmingHack 1.0 Announcements</h1>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/announcements.png" style="width:48px;height:48px;">
+            <h3 class="username">Matty</h3>
+        </div>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">Registration at the CS Building has opened, please register before 10:30am.</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/texpfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Tex</h3>
+        </div>
+        <h4 class="recievermessage">Otherwise we will be very sad :(</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/announcements.png" style="width:48px;height:48px;">
+            <h3 class="username">Matty</h3>
+        </div>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">Quiz is taking place in Atrium at 11:30am! Loser will get pied!</h4>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">Lunch has arrived! Please head down to LG23 to eat!</h4>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">We are leaving for a walk in 5 minutes! Please come to the Atrium if you wish to leave!</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/texpfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Tex</h3>
+        </div>
+        <h4 class="recievermessage"> Fresh air is good for the heart!</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/announcements.png" style="width:48px;height:48px;">
+            <h3 class="username">Matty</h3>
+        </div>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">Pizza has arrived! Please make your way down to LG23 to enjoy! </h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/texpfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Tex</h3>
+        </div>
+        <h4 class="recievermessage">We've got all types! Step up! Step up! </h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/announcements.png" style="width:48px;height:48px;">
+            <h3 class="username">Matty</h3>
+        </div>
+        <h3 class="announcements">ANNOUNCEMENT</h3>
+        <h4 class="recievermessage">The hackathon has been postponed to further notice due to an incident regarding the pizza. Everybody please remain in the building for questioning by the police.</h4>
+
+    </div>
+</div>
+
+<div class="window" id="messagesJohn">
+    <div class="windowtitle" id="messagesJohntitle">Messages<button class="exitbutton" onclick="showWindow('messagesJohn');">[x]</button></div>
+    <div class="windowcontent">
+        <h1 class="name">Unknown - Maybe John Smith?</h1>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/johnpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Unknown</h3>
+        </div>
+        <h4 class="recievermessage">I will get you.</h4>
+        <h4 class="recievermessage">I have not forgiven you</h4>
+        <h4 class="recievermessage">You deserve this.</h4>
+        <h4 class="recievermessage"><i>Unknown deleted photo from chat.</i></h4>
+        <h4 class="recievermessage"><i>Unknown deleted photo from chat.</i></h4>
+    </div>
+</div>
+
+<div class="window" id="messagesNathan">
+    <div class="windowtitle" id="messagesNathantitle">Messages<button class="exitbutton" onclick="showWindow('messagesNathan');">[x]</button></div>
+    <div class="windowcontent">
+        <h1 class="name">Nathan Gold</h1>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">How's your hack going?</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">Good thank you! We've got a solid idea now I think, hbu?</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">We're making a game about a duck skateboarding lmao</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">Good thank you! We've got a solid idea now I think, hbu?</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">We're making a game about a duck skateboarding lmao</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">Haha that'll be great</h4>
+        <h4 class="sendermessage">If you want any help shout</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">Hahaha thanks but no thanks, we'll be fine </h4>
+    </div>
+</div>
+
+<div class="window" id="messagesLeader">
+    <div class="windowtitle" id="messagesLeadertitle">Messages<button class="exitbutton" onclick="showWindow('messagesLeader');">[x]</button></div>
+    <div class="windowcontent">
+        <h1 class="name">Matty</h1>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/announcements.png" style="width:48px;height:48px;">
+            <h3 class="username">Matty</h3>
+        </div>
+        <h4 class="recievermessage">Hope this year is going better than last years!</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">It is, thank you!</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">Hoping to see you at the CTF event</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">unfortunately too locked in our project this year, maybe next one :)</h4>
+        <div class="recieverTogether">
+            <img class="profile" src="messagePhotos/nathanpfp.jpg" style="width:48px;height:48px;">
+            <h3 class="username">Nathan</h3>
+        </div>
+        <h4 class="recievermessage">We're making a game about a duck skateboarding lmao</h4>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">Got it! Good luck! Shout if you need any help</h4>
+    </div>
+</div>
+
+<div class="window" id="messagesTex">
+    <div class="windowtitle" id="messagesTextitle">Messages<button class="exitbutton" onclick="showWindow('messagesTex');">[x]</button></div>
+    <div class="windowcontent">
+        <h1 class="name">Tex</h1>
+        <div class="senderTogether">
+            <img class="profile" src="messagePhotos/hollypfp.png" style="width:48px;height:48px;">
+            <h3 class="username">Holly</h3>
+        </div>
+        <h4 class="sendermessage">Sorry about pieing you! Hope it was easy to get off</h4>
+        <h4 class="sendermessage">Tex?</h4>
+        <h4 class="sendermessage">See you around, next time you can get me!</h4>
+</div>
+</div>
+
+
 
 <!--IMAGE WINDOWS-->
 
 <div class = "window" id = "camera">
     <div class="windowtitle" id="cameratitle">Photos<button class="exitbutton" onclick="showWindow('camera');">[x]</button></div>
-    <div class="windowcontent">
+    <div class="windowcontent" style="flex-direction: row; flex-wrap: wrap;">
         <img class = "photo" src = "gallery/test.jpg" onclick="showWindow('fish')" >
+        <img class = "photo" src = "gallery/image1.jpg" onclick="showWindow('image1')" >
+        <img class = "photo" src = "gallery/image2.jpg" onclick="showWindow('image2')" >
+        <img class = "photo" src = "gallery/image3.jpg" onclick="showWindow('image3')" >
+        <img class = "photo" src = "gallery/image4.jpg" onclick="showWindow('image4')" >
+        <img class = "photo" src = "gallery/image5.jpg" onclick="showWindow('image5')" >
+        <img class = "photo" src = "gallery/image6.jpg" onclick="showWindow('image6')" >
+        <img class = "photo" src = "gallery/image7.jpg" onclick="showWindow('image7')" >
     </div>
 </div>
 
@@ -51,6 +261,53 @@
     </div>
 </div>
 
+<div class = "image window" id = "image1">
+    <div class="windowtitle" id="image1title">image1.jpg<button class="exitbutton" onclick="showWindow('image1');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image1.jpg">
+    </div>
+</div>
+
+<div class = "image window" id = "image2">
+    <div class="windowtitle" id="image2title">image2.jpg<button class="exitbutton" onclick="showWindow('image2');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image2.jpg">
+    </div>
+</div>
+
+<div class = "image window" id = "image3">
+    <div class="windowtitle" id="image3title">image3.jpg<button class="exitbutton" onclick="showWindow('image3');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image3.jpg">
+    </div>
+</div>
+
+<div class = "image window" id = "image4">
+    <div class="windowtitle" id="image4title">image4.jpg<button class="exitbutton" onclick="showWindow('image4');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image4.jpg">
+    </div>
+</div>
+
+<div class = "image window" id = "image5">
+    <div class="windowtitle" id="image5title">image5.jpg<button class="exitbutton" onclick="showWindow('image5');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image5.jpg">
+    </div>
+</div>
+
+<div class = "image window" id = "image6">
+    <div class="windowtitle" id="image6title">image6.jpg<button class="exitbutton" onclick="showWindow('image6');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image6.jpg">
+    </div>
+</div>
+<div class = "image window" id = "image7">
+    <div class="windowtitle" id="image7title">image7.jpg<button class="exitbutton" onclick="showWindow('image7');">[x]</button></div>
+    <div class="windowcontent">
+        <img src="gallery/image7.jpg">
+    </div>
+</div>
 
 <!-- EMAILS-->
 
@@ -58,8 +315,8 @@
     <div class="windowtitle">Mailbox<button class="exitbutton" onclick="showWindow('emails');">[x]</button></div>
     <div class="windowcontent">
         <div id="buttons">
-            <button id="newmessage" onclick="newMessage()"><img src="icons/Writing_Purple.png" width="90px" height="90px">New Message</button>
-            <button id="sync" onclick="sync()"><img src="icons/Circle_Open_Purple.png" width="90px" height="90px">Sync</button>
+            <button id="newmessage" onclick="newMessage()"><img src="icons/Writing_Purple.png" width="50px" height="50px"><br>New Message</button>
+            <button id="sync" onclick="sync()"><img src="icons/Circle_Open_Purple.png" width="50px" height="50px"><br>Sync</button>
         </div>
         <div id="emaillist">
             <!-- duplicate this button for each email, change its id -->
@@ -247,10 +504,10 @@
 
 
 <ul id="taskbar">
-    <li><img src="icons/messages.png" onclick="showWindow('messages');" class = "taskbarIcon"></li>
-    <li><img src="icons/camera.png" onclick="showWindow('camera');" class = "taskbarIcon"></li>
-    <li><img src="icons/emails.png" onclick="showWindow('emails');" class = "taskbarIcon"></li>
-    <li><img src="icons/terminal.png" onclick="showWindow('terminal');" class = "taskbarIcon"></li>
+    <li><img src="icons/messages.png" onclick="showWindow('messages');" class = "taskbarIcon" id="messageButton"></li>
+    <li><img src="icons/camera.png" onclick="showWindow('camera');" class = "taskbarIcon" id="photoButton"></li>
+    <li><img src="icons/emails.png" onclick="showWindow('emails');" class = "taskbarIcon" id="emailButton"></li>
+    <li><img src="icons/terminal.png" onclick="showWindow('terminal');" class = "taskbarIcon" style = "display: block;"></li>
 </ul>
 
 
